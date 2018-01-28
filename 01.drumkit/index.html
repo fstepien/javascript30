@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="103" class="key">
+      <kbd>7</kbd>
+      <span class="sound">riser</span>
+    </div>
+    <div data-key="104" class="key">
+      <kbd>8</kbd>
+      <span class="sound">scratch</span>
+    </div>
+    <div data-key="105" class="key">
+      <kbd>9</kbd>
+      <span class="sound">glitch</span>
+    </div>
+    <div data-key="100" class="key">
+      <kbd>4</kbd>
+      <span class="sound">hat</span>
+    </div>
+    <div data-key="101" class="key">
+      <kbd>5</kbd>
+      <span class="sound">crash</span>
+    </div>
+    <div data-key="102" class="key">
+      <kbd>6</kbd>
+      <span class="sound">scratch</span>
+    </div>
+    <div data-key="97" class="key">
+      <kbd>1</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="98" class="key">
+      <kbd>2</kbd>
+      <span class="sound">glitch</span>
+    </div>
+    <div data-key="99" class="key">
+      <kbd>3</kbd>
+      <span class="sound">snare</span>
+    </div>
+  </div>
+  </div>
+
+
+  <audio data-key="103" src="sounds/riser.wav"></audio>
+  <audio data-key="104" src="sounds/scratch2.wav"></audio>
+  <audio data-key="105" src="sounds/vocal.wav"></audio>
+  <audio data-key="100" src="sounds/hat.wav"></audio>
+  <audio data-key="101" src="sounds/crash.wav"></audio>
+  <audio data-key="102" src="sounds/scratch.wav"></audio>
+  <audio data-key="97" src="sounds/kick.wav"></audio>
+  <audio data-key="98" src="sounds/glitch.wav"></audio>
+  <audio data-key="99" src="sounds/snare.wav"></audio>
+
+<script>
+
+  
+ function playSound(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+  //The currentTime property sets or returns the current position (in seconds) of the video playback. - w3school
+  if(!audio) return;
+
+  audio.play();
+  key.classList.add('playing');
+}
+
+
+
+55
+window.addEventListener('keydown', playSound);
+
+window.addEventListener('keyup', function(e){
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`.playing`);
+  if(e.keyCode > 96 && e.keyCode < 106) {
+  audio.pause();
+  audio.currentTime = 0;
+  key.classList.remove('playing');
+  } else {return}
+});
+</script>
+
+
+</body>
+</html>

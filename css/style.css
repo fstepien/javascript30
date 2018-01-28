@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Againts';
+  src: url("../font/Againts.woff2") format('woff2'),
+       url("../font/Againts.woff") format('woff'),
+       url("../font/againts.ttf") format('ttf');
+}
+body {
+  font-family: sans-serif;
+  background: url('../assets/sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.javascript {
+  color: white;
+  text-align: center;
+  font-family: 'Againts', sans-serif;
+  font-size: 5em;
+}
+.javascript .yellow{
+  color: rgb(245, 220, 1);
+}
+.ref {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 3em;
+  color: white;
+}
+.ref a {
+  color: rgb(245, 220, 1);
+  text-decoration: none;
+  
+}
+.ref a:hover{
+  border-bottom: solid 1px;
+}
+.days{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+.day{
+flex-basis: auto;
+margin: 10px;
+position: relative;
+}
+.day img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  background-color: rgba(2, 64, 85, 0.6);
+}
+
+.day:hover .overlay {
+  opacity: 0;
+}
+
+.text {
+
+  letter-spacing: 0.3em;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
