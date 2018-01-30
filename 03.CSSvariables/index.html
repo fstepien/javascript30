@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Scoped CSS Variables and JS</title>
+</head>
+<body>
+  <h1>explore css filter properties</h1>
+
+  <div class="controls">
+
+    <div class="control">
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+    </div>
+    <div class="control">
+    <label for="brightness">Brightness:</label>
+    <input id="brightness" type="range" name="brightness" min="0" max="200" value="100" data-sizing="%">
+    </div>
+    <div class="control">
+        <label for="contrast">Contrast:</label>
+        <input id="contrast" type="range" name="contrast" min="0" max="200" value="100" data-sizing="%">
+        </div>
+    <div class="control">
+    <label for="grayscale">Grayscale:</label>
+     <input id="grayscale" type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+    </div>    
+ 
+        <div class="control">
+            <label for="opacity">Opacity:</label>
+             <input id="opacity" type="range" name="opacity" min="0" max="100" value="100" data-sizing="%">
+            </div>
+     <div class="control">
+      <label for="saturate">Saturate:</label>
+     <input id="saturate" type="range" name="saturate" min="0" max="200" value="100" data-sizing="%">
+    </div>                         
+  </div>
+  <div class="code">
+      <code>
+          img{<br>
+            
+            filter: <br>
+              <div class="codeText"></div>;<br>
+              
+           
+          }
+      </code>
+      </div>
+  <img src="skyr.jpg">
+  
+
+<script src="app.js"></script>
+
+</body>
+</html>

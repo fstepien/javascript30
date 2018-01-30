@@ -12,13 +12,12 @@ body,html {
   font-family: sans-serif;
 }
 .body{}
+
 .keys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  min-height: 100vh;
   align-items: center;
-  justify-items: center;
   margin: auto;
   position: absolute;
   top: 50%;
