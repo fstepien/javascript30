@@ -9,6 +9,7 @@ body {
   background: url('../assets/sky.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
 }
 .javascript {
@@ -45,22 +46,27 @@ body {
 }
 
 .day{
-flex-basis: auto;
 margin: 10px;
 position: relative;
 }
 @media (max-width: 700px){
   .days{
     flex-direction: column;
+    width: 400px;
   }
   .day{
-    flex-basis: auto;
-  }
+    margin: 10px 0px;
+    position: relative;
+    }
 }
+
 .day img {
   display: block;
-  width: 400px;
   height: auto;
+}
+.day div {
+  height: auto;
+  width: 100%;
 }
 .overlay {
   position: absolute;
